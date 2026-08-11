@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Wadrobe Project</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <i class="bi bi-handbag-fill"></i> The Wadrobe Project
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="dashboard.html">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="inventory.html">Inventory</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pos.html">POS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="customers.html">Customers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="consignors.html">Consignors</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">
+                            <i class="bi bi-person-circle"></i> Login
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="display-4 fw-bold mb-4">The Wadrobe Project: Vintage Consignment</h1>
+                    <p class="lead mb-4">Vintage consignment store offering curated, high-quality pre-loved clothing</p>
+                    <div class="d-flex gap-3">
+                        <a href="dashboard.html" class="btn btn-primary btn-lg">
+                            <i class="bi bi-speedometer2"></i> View Dashboard
+                        </a>
+                        <a href="#features" class="btn btn-outline-light btn-lg">Learn More</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 d-none d-lg-block">
+                    <!-- hero image removed -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section py-5 bg-light">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-3 mb-4">
+                    <div class="stat-card">
+                        <i class="bi bi-box-seam stat-icon text-primary"></i>
+                        <h3 class="stat-number" data-target="1247">0</h3>
+                        <p class="text-muted">Items in Stock</p>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="stat-card">
+                        <i class="bi bi-cash-stack stat-icon text-success"></i>
+                        <h3 class="stat-number">$<span data-target="5600">5,600</span></h3>
+                        <p class="text-muted">Monthly Revenue</p>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="stat-card">
+                        <i class="bi bi-people stat-icon text-info"></i>
+                        <h3 class="stat-number" data-target="892">0</h3>
+                        <p class="text-muted">Active Customers</p>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="stat-card">
+                        <i class="bi bi-person-badge stat-icon text-warning"></i>
+                        <h3 class="stat-number" data-target="43">0</h3>
+                        <p class="text-muted">Consignors</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features-section py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">System Features</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="feature-card card h-100 shadow-sm">
+                        <div class="card-body text-center">
+                            <i class="bi bi-cart-check feature-icon text-primary"></i>
+                            <h4 class="card-title mt-3">Integrated POS</h4>
+                            <p class="card-text">Process transactions seamlessly with automatic inventory updates and real-time stock synchronization across all channels.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card card h-100 shadow-sm">
+                        <div class="card-body text-center">
+                            <i class="bi bi-bar-chart-line feature-icon text-success"></i>
+                            <h4 class="card-title mt-3">Real-Time Analytics</h4>
+                            <p class="card-text">Track sales trends, customer preferences, and inventory performance with data-driven insights and visual dashboards.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card card h-100 shadow-sm">
+                        <div class="card-body text-center">
+                            <i class="bi bi-calculator feature-icon text-warning"></i>
+                            <h4 class="card-title mt-3">Automated Payouts</h4>
+                            <p class="card-text">Calculate consignor commissions automatically with detailed tracking and transparent reporting.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card card h-100 shadow-sm">
+                        <div class="card-body text-center">
+                            <i class="bi bi-people-fill feature-icon text-info"></i>
+                            <h4 class="card-title mt-3">Customer CRM</h4>
+                            <p class="card-text">Build customer profiles, track purchase history, and run targeted marketing campaigns based on preferences.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card card h-100 shadow-sm">
+                        <div class="card-body text-center">
+                            <i class="bi bi-boxes feature-icon text-danger"></i>
+                            <h4 class="card-title mt-3">Inventory Management</h4>
+                            <p class="card-text">Monitor stock levels, get low inventory alerts, and manage items from multiple sources in one unified system.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card card h-100 shadow-sm">
+                        <div class="card-body text-center">
+                            <i class="bi bi-phone feature-icon text-secondary"></i>
+                            <h4 class="card-title mt-3">Mobile Access</h4>
+                            <p class="card-text">Manage sales at flea markets and events with offline mode that syncs automatically when online.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">What Our Customers Say</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="testimonial-card card h-100">
+                        <div class="card-body">
+                            <div class="mb-3">
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                            </div>
+                            <p class="mb-3">"This system has completely transformed how we manage our boutique. Inventory tracking is now effortless, and our customers love the personalized service we can provide."</p>
+                            <div class="d-flex align-items-center">
+                                <div class="testimonial-avatar me-3">SJ</div>
+                                <div>
+                                    <strong>Sarah Johnson</strong>
+                                    <br><small class="text-muted">Owner, Vintage Vibes</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial-card card h-100">
+                        <div class="card-body">
+                            <div class="mb-3">
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                            </div>
+                            <p class="mb-3">"The automated consignor payouts save me hours every month. My partners can check their earnings anytime, and everything is transparent and accurate."</p>
+                            <div class="d-flex align-items-center">
+                                <div class="testimonial-avatar me-3">MC</div>
+                                <div>
+                                    <strong>Michael Chen</strong>
+                                    <br><small class="text-muted">Manager, Retro Revival</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial-card card h-100">
+                        <div class="card-body">
+                            <div class="mb-3">
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                            </div>
+                            <p class="mb-3">"Real-time inventory updates across our store and online shop have eliminated overselling. Our customers are happier, and we're more profitable."</p>
+                            <div class="d-flex align-items-center">
+                                <div class="testimonial-avatar me-3">ED</div>
+                                <div>
+                                    <strong>Emma Davis</strong>
+                                    <br><small class="text-muted">Owner, Chic Consignment</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Integration Section -->
+    <section class="integration-section py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Seamless Integration</h2>
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4">
+                    <h3 class="mb-4">Connect Your Existing Tools</h3>
+                    <p class="lead mb-4">Our system integrates with the platforms you already use, making the transition smooth and hassle-free.</p>
+                    <div class="integration-list">
+                        <div class="integration-item">
+                            <i class="bi bi-check-circle-fill text-success"></i>
+                            <span>Square & Stripe Payment Processing</span>
+                        </div>
+                        <div class="integration-item">
+                            <i class="bi bi-check-circle-fill text-success"></i>
+                            <span>Shopify & WooCommerce E-commerce</span>
+                        </div>
+                        <div class="integration-item">
+                            <i class="bi bi-check-circle-fill text-success"></i>
+                            <span>QuickBooks Accounting</span>
+                        </div>
+                        <div class="integration-item">
+                            <i class="bi bi-check-circle-fill text-success"></i>
+                            <span>Mailchimp Email Marketing</span>
+                        </div>
+                        <div class="integration-item">
+                            <i class="bi bi-check-circle-fill text-success"></i>
+                            <span>Instagram & Facebook Social Commerce</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="integration-diagram d-none d-lg-block">
+                        <!-- integration image removed -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-3 mb-md-0">
+                    <h5><i class="bi bi-handbag-fill"></i> The Wadrobe Project</h5>
+                    <p class="mb-2">vintage and modern consignment store offering curated, high-quality pre-loved clothing</p>
+                    <div class="social-links">
+                        <a href="#" class="text-white me-3"><i class="bi bi-facebook fs-5"></i></a>
+                        <a href="#" class="text-white me-3"><i class="bi bi-twitter fs-5"></i></a>
+                        <a href="#" class="text-white me-3"><i class="bi bi-instagram fs-5"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-linkedin fs-5"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-2 mb-3 mb-md-0">
+                    <h6>Product</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="dashboard.html" class="text-white-50">Features</a></li>
+                        <li><a href="#" class="text-white-50">Pricing</a></li>
+                        <li><a href="#" class="text-white-50">Integrations</a></li>
+                        <li><a href="#" class="text-white-50">API</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2 mb-3 mb-md-0">
+                    <h6>Resources</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white-50">Documentation</a></li>
+                        <li><a href="#" class="text-white-50">Support</a></li>
+                        <li><a href="#" class="text-white-50">Blog</a></li>
+                        <li><a href="#" class="text-white-50">Community</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2 mb-3 mb-md-0">
+                    <h6>Company</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white-50">About Us</a></li>
+                        <li><a href="#" class="text-white-50">Careers</a></li>
+                        <li><a href="#" class="text-white-50">Contact</a></li>
+                        <li><a href="#" class="text-white-50">Partners</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2">
+                    <h6>Legal</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white-50">Privacy Policy</a></li>
+                        <li><a href="#" class="text-white-50">Terms of Service</a></li>
+                        <li><a href="#" class="text-white-50">Security</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4 bg-white opacity-25">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <p class="mb-0">&copy; 2025 The Wadrobe Project. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Login Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header p-2">
+                    <ul class="nav nav-tabs card-header-tabs" role="tablist">
+                        <li class="nav-item"><a class="nav-link active" data-bs-toggle="tab" href="#loginTab" role="tab">Login</a></li>
+                        <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#signupTab" role="tab">Create Account</a></li>
+                    </ul>
+                    <button type="button" class="btn-close ms-2" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="tab-content">
+                        <div class="tab-pane fade show active" id="loginTab" role="tabpanel">
+                            <form id="loginForm">
+                                <div class="mb-3">
+                                    <label for="username" class="form-label">Username</label>
+                                    <input type="text" class="form-control" id="username" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="password" class="form-label">Password</label>
+                                    <input type="password" class="form-control" id="password" required>
+                                </div>
+                                <div class="mb-3 form-check">
+                                    <input type="checkbox" class="form-check-input" id="remember">
+                                    <label class="form-check-label" for="remember">Remember me</label>
+                                </div>
+                                <button type="submit" class="btn btn-primary w-100">Login</button>
+                            </form>
+                            <hr>
+                            <p class="text-muted small text-center">Demo credentials: admin / password</p>
+                        </div>
+                        <div class="tab-pane fade" id="signupTab" role="tabpanel">
+                            <form id="signupForm">
+                                <div class="mb-3">
+                                    <label for="fullName" class="form-label">Full name</label>
+                                    <input type="text" class="form-control" id="fullName" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="signupEmail" class="form-label">Email</label>
+                                    <input type="email" class="form-control" id="signupEmail" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="signupPassword" class="form-label">Password</label>
+                                    <input type="password" class="form-control" id="signupPassword" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="signupPassword2" class="form-label">Confirm Password</label>
+                                    <input type="password" class="form-control" id="signupPassword2" required>
+                                </div>
+                                <button type="submit" class="btn btn-primary w-100">Create Account</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    // Simple client-side signup handler (demo)
+    document.addEventListener('DOMContentLoaded', function() {
+        var signupForm = document.getElementById('signupForm');
+        if (signupForm) {
+            signupForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                var pw = document.getElementById('signupPassword').value;
+                var pw2 = document.getElementById('signupPassword2').value;
+                if (pw !== pw2) {
+                    alert('Passwords do not match');
+                    return;
+                }
+                // Demo behavior: show confirmation, reset form, switch to login tab
+                alert('Account created (demo). You can now log in.');
+                signupForm.reset();
+                var loginTabEl = document.querySelector('a[href="#loginTab"]');
+                if (loginTabEl) {
+                    var tab = new bootstrap.Tab(loginTabEl);
+                    tab.show();
+                }
+                // close modal (optional)
+                // var modalEl = document.getElementById('loginModal');
+                // var modal = bootstrap.Modal.getInstance(modalEl) || new bootstrap.Modal(modalEl);
+                // modal.hide();
+            });
+        }
+    });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

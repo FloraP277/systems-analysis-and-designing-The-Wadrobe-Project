@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customers - The Wadrobe Project</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <i class="bi bi-handbag-fill"></i> The Wadrobe Project
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="dashboard.html">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="inventory.html">Inventory</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pos.html">POS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="customers.html">Customers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="consignors.html">Consignors</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            <i class="bi bi-person-circle"></i> Admin User
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-gear"></i> Settings</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="index.html"><i class="bi bi-box-arrow-right"></i> Logout</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Customer Management -->
+    <div class="container-fluid py-4">
+        <!-- Page Header -->
+        <div class="row mb-4">
+            <div class="col">
+                <h2><i class="bi bi-people-fill"></i> Customer Relationship Management</h2>
+                <p class="text-muted">Track customer preferences and purchase history</p>
+            </div>
+            <div class="col-auto">
+                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addCustomerModal">
+                    <i class="bi bi-person-plus"></i> Add Customer
+                </button>
+            </div>
+        </div>
+
+        <!-- Customer Stats -->
+        <div class="row g-3 mb-4">
+            <div class="col-md-3">
+                <div class="card stat-card">
+                    <div class="card-body">
+                        <h6 class="text-muted">Total Customers</h6>
+                        <h3>892</h3>
+                        <small class="text-success"><i class="bi bi-arrow-up"></i> 24 this month</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card stat-card">
+                    <div class="card-body">
+                        <h6 class="text-muted">Active Customers</h6>
+                        <h3>647</h3>
+                        <small class="text-muted">Last 30 days</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card stat-card">
+                    <div class="card-body">
+                        <h6 class="text-muted">Avg. Lifetime Value</h6>
+                        <h3>$342</h3>
+                        <small class="text-success"><i class="bi bi-arrow-up"></i> 8% increase</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card stat-card">
+                    <div class="card-body">
+                        <h6 class="text-muted">Loyalty Members</h6>
+                        <h3>156</h3>
+                        <small class="text-muted">17.5% of total</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Search and Filters -->
+        <div class="card mb-4">
+            <div class="card-body">
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="bi bi-search"></i></span>
+                            <input type="text" class="form-control" id="customerSearch" 
+                                   placeholder="Search by name, email, or phone...">
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <select class="form-select" id="segmentFilter">
+                            <option value="">All Segments</option>
+                            <option value="vip">VIP Customers</option>
+                            <option value="regular">Regular Customers</option>
+                            <option value="new">New Customers</option>
+                            <option value="inactive">Inactive</option>
+                        </select>
+                    </div>
+                    <div class="col-md-3">
+                        <select class="form-select" id="preferenceFilter">
+                            <option value="">All Preferences</option>
+                            <option value="vintage-denim">Vintage Denim</option>
+                            <option value="outerwear">Outerwear</option>
+                            <option value="dresses">Dresses</option>
+                            <option value="accessories">Accessories</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Customer List -->
+            <div class="col-lg-5">
+                <div class="card">
+                    <div class="card-header bg-white">
+                        <h5 class="mb-0">Customer Directory</h5>
+                    </div>
+                    <div class="card-body p-0">
+                        <div class="list-group list-group-flush" id="customerList">
+                            <!-- Customers populated by JavaScript -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Customer Details -->
+            <div class="col-lg-7">
+                <div class="card" id="customerDetailsCard">
+                    <div class="card-body text-center py-5">
+                        <i class="bi bi-person-circle text-muted" style="font-size: 4rem;"></i>
+                        <p class="text-muted mt-3">Select a customer to view details</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Customer Modal -->
+    <div class="modal fade" id="addCustomerModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title"><i class="bi bi-person-plus"></i> Add New Customer</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="addCustomerForm">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label class="form-label">First Name *</label>
+                                <input type="text" class="form-control" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Last Name *</label>
+                                <input type="text" class="form-control" required>
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label">Email *</label>
+                                <input type="email" class="form-control" required>
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label">Phone</label>
+                                <input type="tel" class="form-control" placeholder="(555) 123-4567">
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label">Preferences</label>
+                                <select class="form-select" multiple size="3">
+                                    <option value="vintage-denim">Vintage Denim</option>
+                                    <option value="outerwear">Outerwear</option>
+                                    <option value="dresses">Dresses</option>
+                                    <option value="accessories">Accessories</option>
+                                    <option value="tops">Tops</option>
+                                    <option value="shoes">Shoes</option>
+                                </select>
+                                <small class="text-muted">Hold Ctrl/Cmd to select multiple</small>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="emailOptIn" checked>
+                                    <label class="form-check-label" for="emailOptIn">
+                                        Subscribe to email marketing
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary" onclick="addCustomer()">
+                        <i class="bi bi-check-circle"></i> Add Customer
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-3 mb-md-0">
+                    <h5><i class="bi bi-handbag-fill"></i> The Wadrobe Project</h5>
+                    <p>Integrated Inventory Management System</p>
+                </div>
+                <div class="col-md-4 mb-3 mb-md-0">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white">Home</a></li>
+                        <li><a href="dashboard.html" class="text-white">Dashboard</a></li>
+                        <li><a href="inventory.html" class="text-white">Inventory</a></li>
+                        <li><a href="pos.html" class="text-white">POS</a></li>
+                        <li><a href="customers.html" class="text-white">Customers</a></li>
+                        <li><a href="consignors.html" class="text-white">Consignors</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Contact Us</h5>
+                    <p class="mb-1">Email: support@wadrobeproject.com</p>
+                    <p class="mb-1">Phone: (555) 987-6543</p>
+                    <div class="social-icons">
+                        <a href="#" class="text-white me-2"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-white me-2"><i class="bi bi-twitter"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/customers.js"></script>
+</body>
+</html>
